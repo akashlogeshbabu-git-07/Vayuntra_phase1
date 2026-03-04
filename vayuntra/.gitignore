@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.db
+*.log
+node_modules/
+dist/
+coverage/
+*.sqlite
+.DS_Store
+.idea/
+.vscode/
+backend/venv/
+*.joblib
+*.pkl

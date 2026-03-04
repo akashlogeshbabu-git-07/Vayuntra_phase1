@@ -1,0 +1,119 @@
+/* Copyright 2026 Vayuntra — Apache License 2.0 */
+/* Global cyber theme variables */
+
+:root {
+  --bg-void: #030712;
+  --bg-base: #060d1a;
+  --bg-surface: #0a1628;
+  --bg-elevated: #0f1e38;
+  --bg-card: #0d1a30;
+  --bg-overlay: rgba(10, 22, 40, 0.95);
+
+  --cyan: #00d4ff;
+  --cyan-dim: #0099bb;
+  --cyan-glow: rgba(0, 212, 255, 0.15);
+  --green: #00ff88;
+  --green-dim: #00cc6a;
+  --green-glow: rgba(0, 255, 136, 0.15);
+  --red: #ff2d55;
+  --red-dim: #cc2244;
+  --red-glow: rgba(255, 45, 85, 0.15);
+  --amber: #ffaa00;
+  --amber-dim: #cc8800;
+  --amber-glow: rgba(255, 170, 0, 0.15);
+  --purple: #7c3aed;
+  --purple-glow: rgba(124, 58, 237, 0.2);
+
+  --text-primary: #e2f0ff;
+  --text-secondary: #7ba3cc;
+  --text-muted: #3d5a7a;
+  --text-accent: #00d4ff;
+
+  --border-subtle: rgba(0, 212, 255, 0.08);
+  --border-dim: rgba(0, 212, 255, 0.15);
+  --border-active: rgba(0, 212, 255, 0.4);
+
+  --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+  --font-display: 'Orbitron', 'Arial Black', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cyan-dim);
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--cyan-glow);
+  color: var(--cyan);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes number-count {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
